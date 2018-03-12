@@ -147,4 +147,10 @@ public class ImsConfigImplBase extends IImsConfig.Stub {
     @Override
     public void setVideoQuality(int quality, ImsConfigListener listener) throws RemoteException {
     }
+
+    public void setImsSmsConfig(int isImsSmsEnabled) throws RemoteException {
+    }
+
+    public void getImsSmsConfig() throws RemoteException {
+    }
 }

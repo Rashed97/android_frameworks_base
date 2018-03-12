@@ -699,6 +699,32 @@ public class ImsConfig {
         }
     }
 
+    public void setImsSmsConfig(int value) throws ImsException {
+        if (this.DBG) {
+            Rlog.d(TAG, "setImsSmsConfig: value =" + value);
+        }
+        try {
+            if (this.miConfig != null) {
+                this.miConfig.setImsSmsConfig(value);
+            }
+        } catch (RemoteException e) {
+            throw new ImsException("setImsSmsConfig()", e, 131);
+        }
+    }
+
+    public void getImsSmsConfig() throws ImsException {
+        if (this.DBG) {
+            Rlog.d(TAG, "getImsSmsConfig:");
+        }
+        try {
+            if (this.miConfig != null) {
+                this.miConfig.getImsSmsConfig();
+            }
+        } catch (RemoteException e) {
+            throw new ImsException("getImsSmsConfig()", e, 131);
+        }
+    }
+
     /**
      * @return true if the binder connection is alive, false otherwise.
      */

@@ -120,4 +120,7 @@ interface IImsConfig {
      * @throws ImsException if calling the IMS service results in an error.
      */
      oneway void setVideoQuality(int quality, ImsConfigListener listener);
+
+     void setImsSmsConfig(int value);
+     void getImsSmsConfig();
 }
