@@ -29,7 +29,7 @@ import android.os.SystemProperties;
 /**
  * {@hide}
  */
-public interface RILConstants extends AbstractRILConstants {
+public interface RILConstants {
     // From the top of ril.cpp
     int RIL_ERRNO_INVALID_RESPONSE = -1;
 

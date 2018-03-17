@@ -95,7 +95,7 @@ public abstract class ImsFeature {
     private final Set<IImsFeatureStatusCallback> mStatusCallbacks = Collections.newSetFromMap(
             new WeakHashMap<IImsFeatureStatusCallback, Boolean>());
     private @ImsState int mState = STATE_NOT_AVAILABLE;
-    protected int mSlotId = SubscriptionManager.INVALID_SIM_SLOT_INDEX;
+    private int mSlotId = SubscriptionManager.INVALID_SIM_SLOT_INDEX;
     private Context mContext;
 
     public interface INotifyFeatureRemoved {
