@@ -28,7 +28,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 
 import com.android.systemui.R;
-import com.android.systemui.statusbar.phone.ButtonDispatcher;
 import com.android.systemui.plugins.statusbar.phone.NavBarButtonProvider;
 import com.android.systemui.statusbar.policy.KeyButtonView;
 
