@@ -27,7 +27,6 @@ import android.view.animation.PathInterpolator;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 
-import com.android.systemui.Interpolators;
 import com.android.systemui.R;
 import com.android.systemui.statusbar.phone.ButtonDispatcher;
 import com.android.systemui.plugins.statusbar.phone.NavBarButtonProvider;
@@ -113,9 +112,9 @@ public class OpaLayout extends FrameLayout implements NavBarButtonProvider.Butto
     public OpaLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
 
-        mFastOutSlowInInterpolator = Interpolators.FAST_OUT_SLOW_IN;
+        mFastOutSlowInInterpolator = new PathInterpolator(0.4f, 0f, 0.2f, 1f);
         mHomeDisappearInterpolator = new PathInterpolator(0.8f, 0f, 1f, 1f);
-        mCollapseInterpolator = Interpolators.FAST_OUT_LINEAR_IN;
+        mCollapseInterpolator = new PathInterpolator(0.4f, 0f, 1f, 1f);
         mDotsFullSizeInterpolator = new PathInterpolator(0.4f, 0f, 0f, 1f);
         mRetractInterpolator = new PathInterpolator(0.4f, 0f, 0f, 1f);
         mDiamondInterpolator = new PathInterpolator(0.2f, 0f, 0.2f, 1f);
